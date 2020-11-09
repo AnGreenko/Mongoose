@@ -1,4 +1,5 @@
 ﻿using System;
+using MonGod.Colorama;
 
 namespace MonGod
 {
@@ -6,7 +7,12 @@ namespace MonGod
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Coloro coloro = new Coloro(true);
+            
+            coloro.WriteLine("Hello", ConsoleColor.Red);
+            string name = coloro.ReadLine("Enter Your Name: ", ConsoleColor.Yellow);
+            
+            coloro.WriteLine($"Hello {name}!", ConsoleColor.Green);
         }
     }
 }
